@@ -11,4 +11,9 @@ public class HomeController {
         System.out.println("Home page");
         return "dashboard";
     }
+
+    @RequestMapping("/addjob")
+    public String postjob() {
+        return "addjob";
+    }
 }
