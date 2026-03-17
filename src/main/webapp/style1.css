@@ -1,0 +1,48 @@
+body {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Container for oval boxes */
+.oval-box-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+/* Oval Cards */
+.oval-box {
+    width: 260px;
+    height: 160px;
+    background: linear-gradient(135deg, #6c757d, #495057);
+    border-radius: 100px;
+    color: #fff;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+/* Hover effect */
+.oval-box:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #0d6efd, #003f88);
+}
+
+/* Text inside oval */
+.oval-box h4 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.oval-box p {
+    font-size: 14px;
+    opacity: 0.8;
+}
