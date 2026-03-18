@@ -22,7 +22,7 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-warning">
     <div class="container">
-        <a class="navbar-brand fs-3 fw-bold" href="#">Telusko Job Portal</a>
+        <a class="navbar-brand fs-3 fw-bold" href="#">Jobseeking Job Portal</a>
 
         <div class="collapse navbar-collapse">
             <ul class="navbar-nav ms-auto">
