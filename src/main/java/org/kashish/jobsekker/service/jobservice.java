@@ -27,5 +27,15 @@ public class jobservice {
         return jobrepo.getjobpost(postid);
     }
 
+    public void updateJobPost(JobPost jobPost) {
+        jobrepo.updatejobpost(jobPost);
+    }
+
+    public void deleteJobPost(int postid) {
+
+            jobrepo.deletejobpost(postid);
+
+
+    }
 }
 

@@ -32,4 +32,17 @@ public class HomeController {
     public void addJobPost(@RequestBody JobPost jobPost) {
         jobservice.addJobPost(jobPost);
     }
+
+    @PutMapping("JobPost")
+    public JobPost updateJobPost(@RequestBody JobPost jobPost) {
+        jobservice.updateJobPost(jobPost);
+        return jobPost;
+    }
+
+    @DeleteMapping("JobPost/{post}")
+    public String deleteJobPost(@PathVariable("post") int postid) {
+        jobservice.deleteJobPost(postid);
+        return "deleted" +" "+postid;
+    }
+
 }
