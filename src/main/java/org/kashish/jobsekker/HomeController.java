@@ -2,30 +2,29 @@ package org.kashish.jobsekker;
 
 import org.kashish.jobsekker.model.JobPost;
 import org.kashish.jobsekker.service.jobservice;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 
-@Controller
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
+
+@CrossOrigin(origins = "http://localhost:3000/")
+@RestController
 public class HomeController {
+
+
     @Autowired
     private jobservice jobservice;
-    @GetMapping({"/","/home"})
-    public String home() {
-        System.out.println("Home page");
-        return "dashboard";
+
+    @GetMapping("JobPosts")
+    public List<JobPost> viewJob(Model model) {
+
+
+        return jobservice.getJobPostList();
     }
 
-    @GetMapping("/addjob")
-    public String postjob() {
-        return "addjob";
-    }
-
-    @PostMapping("/handleForm")
-    public String sucess(JobPost jobPost) {
-        jobservice.addJobPost(jobPost);
-        return "sucess";
-    }
 }

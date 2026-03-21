@@ -27,4 +27,5 @@ public class jobrepo {
         System.out.println("Job post added");
         jobPostList.add(jobPost);
     }
+
 }
