@@ -5,11 +5,7 @@ import org.kashish.jobsekker.service.jobservice;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -31,6 +27,9 @@ public class HomeController {
     @GetMapping("JobPost/{post}")
     public JobPost getJobPost(@PathVariable("post") int postid) {
         return jobservice.getjobpost(postid);
-
+    }
+    @PostMapping("JobPost")
+    public void addJobPost(@RequestBody JobPost jobPost) {
+        jobservice.addJobPost(jobPost);
     }
 }
