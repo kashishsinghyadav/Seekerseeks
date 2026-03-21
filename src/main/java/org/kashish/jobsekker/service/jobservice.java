@@ -22,5 +22,10 @@ public class jobservice {
     public List<JobPost> getJobPostList() {
         return jobrepo.getJobPostList();
     }
+
+    public JobPost getjobpost(int postid) {
+        return jobrepo.getjobpost(postid);
+    }
+
 }
 

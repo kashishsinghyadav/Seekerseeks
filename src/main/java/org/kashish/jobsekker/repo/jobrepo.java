@@ -28,4 +28,13 @@ public class jobrepo {
         jobPostList.add(jobPost);
     }
 
+    public JobPost getjobpost(int postid) {
+        for(JobPost jobpost:jobPostList) {
+            if(jobpost.getPostId()==postid) {
+                return jobpost;
+            }
+        }
+        return null;
+    }
+
 }
