@@ -45,4 +45,11 @@ public class HomeController {
         return "deleted" +" "+postid;
     }
 
+    @GetMapping("load")
+    public void loadinitilly() {
+        jobservice.addall();
+
+
+    }
+
 }
