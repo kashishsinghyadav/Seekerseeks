@@ -51,5 +51,10 @@ public class HomeController {
 
 
     }
+@GetMapping("JobPost/keyword/{keyword}")
+public List<JobPost> getJobPostList(@PathVariable String keyword) {
+        return jobservice.getjobByFilter(keyword);
+
+}
 
 }

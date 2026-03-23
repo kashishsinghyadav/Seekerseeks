@@ -62,5 +62,9 @@ public class jobservice {
         jobrepo.saveAll(jobPostList);
 
     }
+
+    public List<JobPost> getjobByFilter(String keyword) {
+      return   jobrepo.findByPostProfileContainingOrPostDescContaining(keyword,keyword);
+    }
 }
 

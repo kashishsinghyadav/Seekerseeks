@@ -13,7 +13,7 @@ import java.util.List;
 @EnableJpaRepositories
 public interface jobrepo extends JpaRepository<JobPost,Integer> {
 
-
+    List<JobPost> findByPostProfileContainingOrPostDescContaining(String postProfile,String postDesc);
 
 
 //    List<JobPost> jobPostList =  new ArrayList<>(Arrays.asList(
