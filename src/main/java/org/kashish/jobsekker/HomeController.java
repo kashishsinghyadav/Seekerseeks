@@ -17,29 +17,29 @@ public class HomeController {
     @Autowired
     private jobservice jobservice;
 
-    @GetMapping("JobPosts")
+    @GetMapping("jobPosts")
     public List<JobPost> viewJob(Model model) {
 
 
         return jobservice.getJobPostList();
     }
 
-    @GetMapping("JobPost/{post}")
+    @GetMapping("jobPosts/{post}")
     public JobPost getJobPost(@PathVariable("post") int postid) {
         return jobservice.getjobpost(postid);
     }
-    @PostMapping("JobPost")
+    @PostMapping("jobPost")
     public void addJobPost(@RequestBody JobPost jobPost) {
         jobservice.addJobPost(jobPost);
     }
 
-    @PutMapping("JobPost")
+    @PutMapping("jobPosts")
     public JobPost updateJobPost(@RequestBody JobPost jobPost) {
         jobservice.updateJobPost(jobPost);
         return jobPost;
     }
 
-    @DeleteMapping("JobPost/{post}")
+    @DeleteMapping("jobPosts/{post}")
     public String deleteJobPost(@PathVariable("post") int postid) {
         jobservice.deleteJobPost(postid);
         return "deleted" +" "+postid;
@@ -51,7 +51,7 @@ public class HomeController {
 
 
     }
-@GetMapping("JobPost/keyword/{keyword}")
+@GetMapping("jobPosts/keyword/{keyword}")
 public List<JobPost> getJobPostList(@PathVariable String keyword) {
         return jobservice.getjobByFilter(keyword);
 
