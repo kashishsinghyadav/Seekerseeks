@@ -33,7 +33,7 @@ public class HomeController {
         jobservice.addJobPost(jobPost);
     }
 
-    @PutMapping("jobPosts")
+    @PutMapping("jobPost")
     public JobPost updateJobPost(@RequestBody JobPost jobPost) {
         jobservice.updateJobPost(jobPost);
         return jobPost;
